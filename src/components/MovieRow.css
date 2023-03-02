@@ -1,0 +1,77 @@
+/* Geral */
+.movieRow {
+    margin-bottom: 30px; /* Entre um item e outro  */
+}
+
+.movieRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+/* Lista */
+.movieRow--listarea {
+    overflow-x: hidden; /* Tudo que passar da horizontal corta */
+    padding-left: 30px; /* Alinha ao título */
+}
+
+.movieRow--list {
+    transition: all ease 0.6s;
+}
+
+.movieRow--item {
+    display: inline-block; /* Um item ao lado do outro */
+    width: 150px; /* Cada item tem */
+    cursor: pointer;
+}
+
+.movieRow--item img {
+    width: 100%; /* 100% de 150 */
+    transform: scale(0.9); /* proporcionamente diminuído pra ter 90%, para a animação */
+    transition: all ease 0.3s; /* Para fazer uma transição suave */
+}
+
+.movieRow--item img:hover {
+    transform: scale(1); /* Aumentadinha na imagem */
+} 
+
+.movieRow--left,
+.movieRow--right{
+    position: absolute; /* meio flutuado */
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6); /* preto leve*/
+    z-index: 99; /* fica acima dos filmes */
+    display: flex;  /* alinha icone */
+    align-items: center;/* alinha icone */
+    justify-content: center;
+    overflow: hidden; /* sem espaço extra */
+    cursor: pointer;
+    opacity: 0; /* por padrão invisível*/
+    transition: all ease 0.6s;
+}
+
+.movieRow--left{
+    left: 0; /* Fica na esquerda */
+}
+
+.movieRow--right{
+    right: 0;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+    opacity: 1; /* quando passa mouse por cima da área aparece*/
+}
+
+/*Condição para listas no celular*/
+@media (max-width:760px){
+    .movieRow--left,
+    .movieRow--right{
+        opacity: 1;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+}
+
+

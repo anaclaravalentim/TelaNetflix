@@ -60,12 +60,13 @@ p{
 }
 
 @media (max-width:760px){
-    .Nomes{
+    .header--nomes{
         opacity: 0;
     }
 
-    .header--icone1{
-        opacity: 0; 
+    .header--icone1,
+    .header--icone2{
+        opacity: 0;
     }
 
 }

@@ -60,7 +60,7 @@ p{
 }
 
 @media (max-width:760px){
-    .header--nomes{
+    .header--nomes,p{
         opacity: 0;
     }
 
